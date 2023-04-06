@@ -54,3 +54,8 @@ def byConf():
   logger.warn('warn message #Cfg')
   logger.error('error message #Cfg')
   logger.critical('critical message #Cfg')
+
+
+byCode1()
+byCode2()
+byConf()

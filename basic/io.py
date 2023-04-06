@@ -14,3 +14,6 @@ def demo():
   print("Read String is : ", str)
   # Close opend file
   fo.close()
+
+
+demo()

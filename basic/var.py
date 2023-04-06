@@ -41,3 +41,6 @@ def demo():
   print(multilinestr)
 
   print('len', len(multilinestr))
+
+
+demo()

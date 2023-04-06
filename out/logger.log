@@ -106,3 +106,15 @@ Tue 04 Apr 2023 02:55:41 ERROR log.py 41 139 error message #2
 ERROR:example:error message #2
 Tue 04 Apr 2023 02:55:41 CRITICAL log.py 42 139 critical message #2
 CRITICAL:example:critical message #2
+INFO:root:info message
+WARNING:root:warn message
+ERROR:root:error message
+CRITICAL:root:critical message V1
+DEBUG:example:debug message #2
+INFO:example:info message #2
+Thu 06 Apr 2023 06:20:50 WARNING log.py 40 576 warn message #2
+WARNING:example:warn message #2
+Thu 06 Apr 2023 06:20:50 ERROR log.py 41 576 error message #2
+ERROR:example:error message #2
+Thu 06 Apr 2023 06:20:50 CRITICAL log.py 42 576 critical message #2
+CRITICAL:example:critical message #2

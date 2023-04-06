@@ -1,0 +1,10 @@
+Format,File,Description
+MPEG,.mpg.mpeg,MPEG. Developed by the Moving Pictures Expert Group. The first popular video format on the web. Not supported anymore in HTML. 
+AVI,.avi,"AVI (Audio Video Interleave). Developed by Microsoft. Commonly used in video cameras and TV hardware. Plays well on Windows computers, but not in web browsers."
+WMV,.wmv,"WMV (Windows Media Video). Developed by Microsoft. Commonly used in video cameras and TV hardware. Plays well on Windows computers, but not in  web browsers."
+QuickTime,.mov,"QuickTime. Developed by Apple. Commonly used in video cameras and TV hardware. Plays well on Apple computers, but not in web browsers."
+RealVideo,.rm.ram,RealVideo. Developed by Real Media to allow video streaming with low bandwidths. Does not play in web browsers.
+Flash,.swf.flv,Flash. Developed by Macromedia. Often requires an extra component (plug-in) to play in web browsers.
+Ogg,.ogg,Theora Ogg. Developed by the Xiph.Org Foundation. Supported by HTML.
+WebM,.webm,"WebM. Developed by Mozilla, Opera, Adobe, and Google. Supported by HTML."
+MPEG-4or MP4,.mp4,MP4. Developed by the Moving Pictures Expert Group. Commonly used in video cameras and TV hardware. Supported by all browsers and  recommended by YouTube.  

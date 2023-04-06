@@ -43,7 +43,7 @@ session.get(url)
 Functions:
 * [select/select_one](book/MP22022/ch05/ch5-4-3.py") - CSS selector
 * [find/find_all](book/MP22022/ch05/ch5-4-3a.py") - find tag
-`
+`,
   syntax: "python",  
   codeUrl: "topic/web/bs4.py",
 }      

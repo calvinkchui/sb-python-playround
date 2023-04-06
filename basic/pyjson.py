@@ -1,6 +1,5 @@
 import json
 
-
 # Functions
 def demo():
   print("# pyjson.py")

@@ -32,9 +32,11 @@
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js">
   </script>
-
   
-  <script src="snippet/snippet.js"> <!-- 20230404 -->
+  <script src="https://frameworkjs.zerohui.repl.co/snippet/20230404/snippet.js"> 
+  </script>
+
+   <script src="snippet/snippet-data.js"> 
   </script>
 
 </head>
@@ -47,26 +49,6 @@
     </div>
 
     <script>
-
-      var snippets = [
-        {
-          title: "console",
-          content: "Note: press F12 to open console in browser",
-          syntax: "js",
-          tags: ["js"],
-          code: `
-console.log('console.log - test');
-//
-console.group('group');
-console.log('content of group');
-console.groupEnd();
-
-snippetjs.log('snippet log') // test snippetjs
-`,
-          output: "js"
-        }
-      ]
-
       // script
       snippet(snippets, {});
 

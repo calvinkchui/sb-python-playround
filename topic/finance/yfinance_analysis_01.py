@@ -3,7 +3,7 @@ Python for Finance Part 2: Simple Moving Average
   https://www.linkedin.com/pulse/python-finance-part-2-simple-moving-average-henry-meier
   
 - use yfinance_cache  
-
+- use MyTT
 
 https://github.com/mpquant/Python-Financial-Technical-Indicators-Pandas
 '''
@@ -11,6 +11,7 @@ https://github.com/mpquant/Python-Financial-Technical-Indicators-Pandas
 #import yfinance as yf
 import yfinance_cache as yfc
 import matplotlib.pyplot as plt
+#from topic.finance.MyTT import *
 
 # Input the start and end dates and the stock ticker symbol
 start_date = input("Enter the start date (YYYY-MM-DD): ")
@@ -32,6 +33,8 @@ data = src.history(start=start_date, end=end_date)
 # Calculate the short-term and long-term Simple Moving Averages (SMAs)
 sma_short = data['Close'].rolling(window=n_short).mean()
 sma_long = data['Close'].rolling(window=n_long).mean()
+#sma_short = MA(data['Close'],n_short)
+#xsma_long = MA(data['Close'],n_long)
 
 # Determine the Buy or Sell signals based on the SMA crossovers
 signals = [None]*len(sma_short)

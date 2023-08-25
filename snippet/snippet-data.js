@@ -46,5 +46,25 @@ Functions:
 `,
   syntax: "python",  
   codeUrl: "topic/web/bs4.py",
-}      
+},
+{
+  title: "Pandas - Basic", 
+  content:`
+Strcuture:
+* \`Series\`: Column
+* \`DataFrame\`: Table
+
+Read Data:
+* [Read CSV](https://www.w3schools.com/python/pandas/pandas_csv.asp)
+  * \`pd.read_csv('data.csv')\`
+* [Read JSON](https://www.w3schools.com/python/pandas/pandas_json.asp)
+
+Analying Data:
+* \`df.head(10)\` -  return first 10 rows of the DataFrame
+* \`df.tail()\` -  return last 5 rows of the DataFrame
+* \`df.info()\` - Information of data
+`,
+  syntax: "python",  
+  codeUrl: "topic/data/pandas_01_basic.py",
+}        
 ]

@@ -11,30 +11,35 @@ https://github.com/mpquant/Python-Financial-Technical-Indicators-Pandas
 #import yfinance as yf
 import yfinance_cache as yfc
 import matplotlib.pyplot as plt
-#from topic.finance.MyTT import *
+
+import pandas as pd
+from topic.finance.MyTT import *
 
 # Input the start and end dates and the stock ticker symbol
 start_date = input("Enter the start date (YYYY-MM-DD): ")
 end_date = input("Enter the end date (YYYY-MM-DD): ")
 symbol = input("Enter the stock ticker symbol: ")
 
-start_date = start_date or "2022-01-01"
+start_date = start_date or "2021-01-01"
 end_date = end_date or "2023-07-31"
-symbol = symbol or "0005.HK"
+symbol = symbol or "0P0000Y61U.HK"
 
-n_short=15
-n_long=50
-
+n_short=5
+n_long=15
+n_rsi=5
 # Download the stock price data from Yahoo Finance API
 #data = yf.download(symbol, start=start_date, end=end_date)
 src = yfc.Ticker(symbol);
 data = src.history(start=start_date, end=end_date)
 
 # Calculate the short-term and long-term Simple Moving Averages (SMAs)
-sma_short = data['Close'].rolling(window=n_short).mean()
-sma_long = data['Close'].rolling(window=n_long).mean()
-#sma_short = MA(data['Close'],n_short)
-#xsma_long = MA(data['Close'],n_long)
+#sma_short = data['Close'].rolling(window=n_short).mean()
+#sma_long = data['Close'].rolling(window=n_long).mean()
+
+idx = data['Close'].index
+sma_short =  pd.Series( MA(data['Close'],n_short), index=idx)
+sma_long = pd.Series( MA(data['Close'],n_long) , index=idx)
+rsi = pd.Series( RSI(data['Close'],n_rsi) , index=idx)
 
 # Determine the Buy or Sell signals based on the SMA crossovers
 signals = [None]*len(sma_short)
@@ -53,16 +58,18 @@ for i in range(1, len(sma_short)):
 data['Signal'] = signals
 
 
-plt.figure(figsize=(10,6))
+plt.figure(figsize=(15,6))
 
 # Plot the stock price and SMAs, and add markers for the signal changes
 plt.plot(data['Close'], label='Price')
 plt.plot(sma_short, label= str(n_short) +'-day SMA')
 plt.plot(sma_long, label= str(n_long) + '-day SMA')
+#plt.plot(rsi, label= str(n_rsi) + '-day RSI')
+
 buy_points = data[data['Signal'] == 'Buy']
 sell_points = data[data['Signal'] == 'Sell']
-plt.plot(buy_points.index, buy_points['Close'], '^', markersize=10, color='g', label='Buy signal')
-plt.plot(sell_points.index, sell_points['Close'], 'v', markersize=10, color='r', label='Sell signal')
+plt.plot(buy_points.index, buy_points['Close'], '^', markersize=7, color='g', label='Buy signal')
+plt.plot(sell_points.index, sell_points['Close'], 'v', markersize=7, color='r', label='Sell signal')
 
 # Add the legend and title to the plot
 plt.legend()

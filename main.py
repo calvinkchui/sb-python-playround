@@ -35,4 +35,12 @@ print("run 'main.py'")
 
 #import topic.finance.yfinance_cache
 
+# MyTT https://github.com/mpquant/Python-Financial-Technical-Indicators-Pandas
+#import topic.finance.MyTTSample
+
+# finance plot
+#import topic.finance.mplfinance
+
 import topic.finance.yfinance_analysis_01
+
+

@@ -41,6 +41,8 @@ print("run 'main.py'")
 # finance plot
 #import topic.finance.mplfinance
 
+#import topic.finance.pandas_datareader
+
 import topic.finance.yfinance_analysis_01
 
 

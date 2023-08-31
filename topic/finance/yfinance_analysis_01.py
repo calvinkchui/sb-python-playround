@@ -20,7 +20,7 @@ start_date = input("Enter the start date (YYYY-MM-DD): ")
 end_date = input("Enter the end date (YYYY-MM-DD): ")
 symbol = input("Enter the stock ticker symbol: ")
 
-start_date = start_date or "2021-01-01"
+start_date = start_date or "2017-01-01"
 end_date = end_date or "2023-07-31"
 symbol = symbol or "0P0000Y61U.HK"
 
@@ -50,8 +50,7 @@ for i in range(1, len(sma_short)):
     elif sma_short[i] < sma_long[i] and sma_short[i-1] >= sma_long[i-1]:
         signals[i] = 'Sell'
         print(f"Sell signal detected on {data.index[i].date()}")
-        
-        
+      
                 
         
 # Add the signals to the data frame

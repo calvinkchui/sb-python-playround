@@ -1,7 +1,15 @@
+import sys
+
 #https://www.tutorialspoint.com/python/index.htm
+
+
 
 # Hello World
 print("run 'main.py'")
+
+target = "yfinance" #default
+if len(sys.argv) > 1:
+    target = sys.argv[1]
 
 # ----------------------------------------------
 # Basic
@@ -31,7 +39,8 @@ print("run 'main.py'")
 # Topic - Finance
 # ----------------------------------------------
 #import Topic.finance.alpha_vantage
-#import Topic.finance.yfinance
+if target == "yfinance":    
+    import topic.finance.yfinance
 
 #import topic.finance.yfinance_cache
 
@@ -42,7 +51,7 @@ print("run 'main.py'")
 #import topic.finance.mplfinance
 
 #import topic.finance.pandas_datareader
-
-import topic.finance.yfinance_analysis_01
+if target == "yfinance_analysis":    
+  import topic.finance.yfinance_analysis_01
 
 

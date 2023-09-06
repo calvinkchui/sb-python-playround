@@ -3,13 +3,14 @@ import yfinance as yf
 import pandas as pd
 
 def ticker():
-    msft = yf.Ticker("0005.HK")
+    msft = yf.Ticker("0P0000Y61U.HK")
     
     # get all stock info
     msft.info
 
     # get historical market data
     hist = msft.history(period="1mo")
+    print("history:")
     print(hist)
     
     # show meta information about the history (requires history() to be called first)
@@ -17,7 +18,8 @@ def ticker():
 
     # show actions (dividends, splits, capital gains)
     msft.actions
-    msft.dividends
+    print("dividends:")
+    print(msft.dividends)
     msft.splits
     msft.capital_gains  # only for mutual funds & etfs
 

@@ -50,8 +50,11 @@ if target == "yfinance":
 # finance plot
 #import topic.finance.mplfinance
 
-#import topic.finance.pandas_datareader
+
+if target == "pandas_datareader":
+    import topic.finance.pandas_datareader
+
 if target == "yfinance_analysis":    
-  import topic.finance.yfinance_analysis_01
+    import topic.finance.yfinance_analysis_01
 
 

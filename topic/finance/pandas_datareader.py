@@ -30,6 +30,7 @@ gdp = web.DataReader('GDP', 'fred', start, end)
 print(gdp.loc['2023-01-01'])
 
 inflation = web.DataReader(['CPIAUCSL', 'CPILFESL'], 'fred', start, end)
+print("inflation.head:")
 print(inflation.head)
 
 '''
@@ -42,3 +43,13 @@ DATE
 2020-05-01   255.868   265.574
 2020-06-01   256.986   265.952
 '''
+
+
+#df = web.DataReader('GE', 'yahoo', start='2019-09-10', end='2019-10-09')
+#print("df.head():")
+#print(df.head())
+
+
+dividends = web.DataReader('IBM', 'yahoo-dividends', start, end)
+print("dividends.head():")
+print(dividends.head())

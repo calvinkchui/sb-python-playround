@@ -66,5 +66,21 @@ Analying Data:
 `,
   syntax: "python",  
   codeUrl: "topic/data/pandas_01_basic.py",
-}        
+},{
+  title: "PyTest", 
+  content:`
+# Pytest
+* File start / end with \`test\`
+* Class start with \`test\`
+* Method start with \'test\'
+
+# Run
+\`\`\`py
+pytest
+pytest test_func.py
+\`\`\`
+`,
+  syntax: "python",  
+  codeUrl: "topic/test/test_example.py",  
+}
 ]

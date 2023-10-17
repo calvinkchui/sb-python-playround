@@ -1,64 +1,69 @@
 # WIP
+# Refer
+# - https://algotrading101.com/learn/yfinance-guide/
+
 import yfinance as yf
 import pandas as pd
 
+
 def ticker():
-    msft = yf.Ticker("0P0000Y61U.HK")
-    
-    # get all stock info
-    msft.info
+  msft = yf.Ticker("0P0000Y61U.HK")
 
-    # get historical market data
-    hist = msft.history(period="1mo")
-    print("history:")
-    print(hist)
-    
-    # show meta information about the history (requires history() to be called first)
-    msft.history_metadata
+  # get all stock info
+  msft.info
 
-    # show actions (dividends, splits, capital gains)
-    msft.actions
-    print("dividends:")
-    print(msft.dividends)
-    msft.splits
-    msft.capital_gains  # only for mutual funds & etfs
+  # get historical market data
+  hist = msft.history(period="1mo")
+  print("history:")
+  print(hist)
 
-    # show share count
-    msft.get_shares_full(start="2023-01-01", end=None)
+  # show meta information about the history (requires history() to be called first)
+  msft.history_metadata
 
-    # show financials:
-    # - income statement
-    msft.income_stmt
-    msft.quarterly_income_stmt
-    # - balance sheet
-    msft.balance_sheet
-    msft.quarterly_balance_sheet
-    # - cash flow statement
-    msft.cashflow
-    msft.quarterly_cashflow
-    # see `Ticker.get_income_stmt()` for more options
+  # show actions (dividends, splits, capital gains)
+  msft.actions
+  print("dividends:")
+  print(msft.dividends)
+  msft.splits
+  msft.capital_gains  # only for mutual funds & etfs
 
-    # show holders
-    msft.major_holders
-    msft.institutional_holders
-    msft.mutualfund_holders
+  # show share count
+  msft.get_shares_full(start="2023-01-01", end=None)
 
-    # Show future and historic earnings dates, returns at most next 4 quarters and last 8 quarters by default. 
-    # Note: If more are needed use msft.get_earnings_dates(limit=XX) with increased limit argument.
-    msft.earnings_dates
+  # show financials:
+  # - income statement
+  msft.income_stmt
+  msft.quarterly_income_stmt
+  # - balance sheet
+  msft.balance_sheet
+  msft.quarterly_balance_sheet
+  # - cash flow statement
+  msft.cashflow
+  msft.quarterly_cashflow
+  # see `Ticker.get_income_stmt()` for more options
 
-    # show ISIN code - *experimental*
-    # ISIN = International Securities Identification Number
-    msft.isin
+  # show holders
+  msft.major_holders
+  msft.institutional_holders
+  msft.mutualfund_holders
 
-    # show options expirations
-    msft.options
+  # Show future and historic earnings dates, returns at most next 4 quarters and last 8 quarters by default.
+  # Note: If more are needed use msft.get_earnings_dates(limit=XX) with increased limit argument.
+  msft.earnings_dates
 
-    # show news
-    msft.news
+  # show ISIN code - *experimental*
+  # ISIN = International Securities Identification Number
+  msft.isin
 
-    # get option chain for specific expiration
-    #opt = msft.option_chain('YYYY-MM-DD')
-    # data available via: opt.calls, opt.puts
-    
+  # show options expirations
+  msft.options
+
+  # show news
+  msft.news
+
+  # get option chain for specific expiration
+  #opt = msft.option_chain('YYYY-MM-DD')
+  # data available via: opt.calls, opt.puts
+
+
 ticker()

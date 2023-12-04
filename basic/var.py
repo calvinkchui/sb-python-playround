@@ -1,3 +1,6 @@
+from collections import namedtuple
+
+
 def demo():
 
   print("# variable")
@@ -43,4 +46,22 @@ def demo():
   print('len', len(multilinestr))
 
 
-demo()
+def moreDemo():
+
+  # Enumeration (enumerate)
+  names = ["Alice", "Bob", "Charlie"]
+  for index, name in enumerate(names):
+    print(f"{index}: {name}")
+
+  # Named tuple - immutable, you can’t modify them after creation
+  Person = namedtuple('Person', ['name', 'age'])
+  alice = Person(name="Alice", age=30)
+  print(alice)
+
+  # Dictionaries — get()
+  # get() - When you want to retrieve a key’s value but aren’t sure it exists.
+  # `setdefault()` - hen you want to set a default value if the key doesn’t exist.
+  data = {"name": "Alice"}
+  age = data.get("age", 30)
+  data.setdefault("country", "USA")
+  print(data)

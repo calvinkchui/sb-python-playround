@@ -23,15 +23,22 @@ if target == 'demo':
   #import basic.pyjson as pyjson
   #import basic.io as io
 
+  #import basic.var as var
+  #var.demo()
+  #var.moreDemo()
+
+  import basic.zipunzip as zz
+  zz.demo()
+
   # ----------------------------------------------
   # Advance
   # ----------------------------------------------
 
   #log
   #import advance.log as log
-  import advance.decorator as d
-  d.demo()
-  
+  #import advance.decorator as d
+  #d.demo()
+
   # ----------------------------------------------
   # Topic - Data
   # ----------------------------------------------

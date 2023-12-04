@@ -1,24 +1,34 @@
 var snippets = [
-{
-  title: "function",  
-  syntax: "python",  
-  codeUrl: "basic/function.py",
-},
-{
-  title: "io",  
-  syntax: "python",  
-  codeUrl: "basic/io.py",
-},  
-{
-  title: "json",  
-  syntax: "python",  
-  codeUrl: "basic/pyjson.py",
-}, 
-{
-  title: "logging",  
-  syntax: "python",  
-  codeUrl: "advance/log.py",
-},
+  {
+    title: "function",  
+    syntax: "python",  
+    codeUrl: "basic/function.py",
+  },
+  {
+    title: "function - map(), filter(), reduce()",  
+    syntax: "python",  
+    codeUrl: "basic/function_mapFilterReduce.py",
+  },
+  {
+    title: "io",  
+    syntax: "python",  
+    codeUrl: "basic/io.py",
+  },  
+  {
+    title: "json",  
+    syntax: "python",  
+    codeUrl: "basic/pyjson.py",
+  }, 
+  {
+    title: "logging",  
+    syntax: "python",  
+    codeUrl: "advance/log.py",
+  },
+  {
+    title: "decorator",  
+    syntax: "python",  
+    codeUrl: "advance/decorator.py",
+  },
 {
   title: "requests", 
   syntax: "python",  

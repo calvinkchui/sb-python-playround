@@ -569,7 +569,7 @@ test = ["pylint", "pycodestyle", "pyflakes", "pytest", "pytest-cov", "coverage"]
 
 [[package]]
 name = "pytoolconfig"
-version = "1.2.5"
+version = "1.2.6"
 description = "Python tool configuration"
 category = "dev"
 optional = false
@@ -581,10 +581,10 @@ platformdirs = {version = ">=1.4.4", optional = true, markers = "extra == \"glob
 tomli = {version = ">=2.0.1", markers = "python_version < \"3.11\""}
 
 [package.extras]
+validation = ["pydantic (>=1.7.4)"]
+global = ["platformdirs (>=1.4.4)"]
 doc = ["tabulate (>=0.8.9)", "sphinx (>=4.5.0)"]
 gendocs = ["sphinx (>=4.5.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx-rtd-theme (>=1.0.0)", "pytoolconfig"]
-global = ["platformdirs (>=1.4.4)"]
-validation = ["pydantic (>=1.7.4)"]
 
 [[package]]
 name = "pytz"
@@ -797,10 +797,18 @@ python-versions = ">=3.7"
 idna = ">=2.0"
 multidict = ">=4.0"
 
+[[package]]
+name = "zxbasic"
+version = "1.17.1.post1"
+description = "Boriel's ZX BASIC Compiler"
+category = "main"
+optional = false
+python-versions = ">=3.10,<4.0"
+
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "304dd4274632e503bd9d7c821c7530d86a4fd709713a932f380dfbdc0f93efef"
+content-hash = "73958a54da4834b811b4487433140decb7eab8525d10b9d94e9f60bb2614e161"
 
 [metadata.files]
 aiohttp = []
@@ -868,3 +876,4 @@ werkzeug = []
 whatthepatch = []
 yapf = []
 yarl = []
+zxbasic = []

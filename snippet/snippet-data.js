@@ -80,7 +80,27 @@ Analying Data:
 * \`df.info()\` - Information of data
 `,
   syntax: "python",  
-  codeUrl: "topic/data/pandas_01_basic.py",
+  codeUrl: "topic/data/pandas_0010_basic.py",
+},{
+    title: "Pandas - Get Row", 
+    content:`
+  * \`at[row name, column name]\`
+  * \`iat[row index, column index]\`
+  `,
+    syntax: "python",  
+    codeUrl: "topic/data/pandas_0021_getCell.py",
+},{
+  title: "Pandas - Read Excel", 
+  syntax: "python",  
+  codeUrl: "topic/data/pandas_0100_readEXcel.py",
+},{  
+  title: "Pandas - Get Cell", 
+  content:`
+* \`loc[row names][column names]\`
+* \`iloc[row indexes][column indexes]\`
+`,
+  syntax: "python",  
+  codeUrl: "topic/data/pandas_0020_getRow.py",
 },{
   title: "PyTest", 
   content:`

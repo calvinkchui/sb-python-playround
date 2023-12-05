@@ -1,5 +1,10 @@
 var snippets = [
   {
+    title: "Varible",  
+    syntax: "python",  
+    codeUrl: "basic/var.py",
+  },
+  {
     title: "function",  
     syntax: "python",  
     codeUrl: "basic/function.py",

@@ -19,6 +19,10 @@ import datetime as dt
 #print(data)
 
 
+dividends = web.DataReader('IBM', 'yahoo-dividends', start, end)
+print("dividends.head():")
+print(dividends.head())
+
 # ------------------------------------------------------------
 #FRED
 # ------------------------------------------------------------
@@ -44,12 +48,3 @@ DATE
 2020-06-01   256.986   265.952
 '''
 
-
-#df = web.DataReader('GE', 'yahoo', start='2019-09-10', end='2019-10-09')
-#print("df.head():")
-#print(df.head())
-
-
-dividends = web.DataReader('IBM', 'yahoo-dividends', start, end)
-print("dividends.head():")
-print(dividends.head())

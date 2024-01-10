@@ -5,7 +5,8 @@ import pandas as pd
 
 # Read Excel file
 df = pd.read_csv('assets/data-pandas100.csv',
-                 parse_dates=['dob'])
+                 parse_dates=['dob']    # parase date 
+                 ) 
 print(df)
 
-print(df.info())
+print(df.info)

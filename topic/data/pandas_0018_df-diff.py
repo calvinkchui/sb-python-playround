@@ -1,4 +1,6 @@
+import numpy as np
 import pandas as pd
+
 from dataframe_diff import dataframe_diff
 
 
@@ -88,3 +90,24 @@ print( d2_additional)
 0  30-Nov  0005  500.0        D        D900  df_x
 1  31-Dec  0006  600.0        D        D900  df_y
 '''
+
+
+# More example on dataframe-diff
+
+df_prior_data = { 'id': [1, 2, 3, 4 ],
+               'remarks': [ 'X-X', 'X-NaN','NaN-X', 'NaN-Nan'],
+               'str': [ 'X', 'X',  np.NaN,  np.NaN ],           
+}
+
+df_curr_data = { 'id': [1, 2, 3, 4 ],
+               'remarks': [ 'X-X', 'X-NaN','NaN-X', 'NaN-Nan'],
+               'str': [ 'X',  np.NaN, 'X',  np.NaN]               
+}
+
+df_p = pd.DataFrame(df_prior_data)
+df_c = pd.DataFrame(df_curr_data)
+
+d1_column,d2_additional=dataframe_diff(df_p, df_c, key=['id'])
+print("#3a More example on dataframe-dff")
+print(d1_column)
+

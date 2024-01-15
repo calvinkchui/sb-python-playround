@@ -49,3 +49,33 @@ print (df.join(other.set_index('key'), on='key'))
 4  K4  A4  NaN
 5  K5  A5  NaN
 '''
+
+
+# https://stackoverflow.com/questions/32277473/merge-two-dataframes-based-on-multiple-keys-in-pandas
+print("#4 Join with multiple keys (1-1)")
+a = pd.DataFrame({'A':['0', '0', '1','1'],'B':['0', '1', '0','1'], 'v':[True, False, False, True]})
+b = pd.DataFrame({'A':['0', '0', '1','1'], 'B':['0', '1', '0','1'],'v':[False, True, True, True]})
+
+result = pd.merge(a, b, on=['A','B'], how='inner', suffixes=['_and', '_or'])
+print(result)
+'''
+   A  B  v_and   v_or
+0  0  0   True  False
+1  0  1  False   True
+2  1  0  False   True
+3  1  1   True   True
+'''
+
+print("#4 Join with multiple keys (1-n)")
+c = pd.DataFrame({'A':['0', '0', '1','1'], 'B':['0', '1', '1','1'],'x':['0-0', '0-1', '1-1 A', '1-1 B']})
+result = pd.merge(a, c, on=['A','B'], how='left', suffixes=['_and', '_or'])
+print(result)
+
+'''
+   A  B      v      x
+0  0  0   True    0-0
+1  0  1  False    0-1
+2  1  0  False    NaN
+3  1  1   True  1-1 A
+4  1  1   True  1-1 B
+'''

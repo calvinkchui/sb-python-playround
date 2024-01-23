@@ -37,7 +37,7 @@ def getFirstMerchantPrice(url):
     rst['name'] = tag.find("p", attrs={"class": "quotation-merchant-name"} ).find("a").text
     
     
-    rst['price'] =tag.select('.text-price-number')[0]['data-price']
+    rst['price'] = float(tag.select('.text-price-number')[0]['data-price'])
 
     
     

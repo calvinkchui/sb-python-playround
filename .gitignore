@@ -2,6 +2,9 @@
 *.py[cod]
 *$py.class
 
+*/tmp/*
+
 venv/
 
 out/
+

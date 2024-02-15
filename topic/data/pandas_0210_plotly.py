@@ -11,5 +11,5 @@ fig = df.plot(title="Pandas Backend Example" , #template="simple_white",
 fig.update_yaxes(tickprefix="$")
 #fig.show()
 #fig.savefig("0210-plotly.png")
-fig.write_image("0210-plotly.png")
+fig.write_image("tmp/0210-plotly.png")
 #fig = plt.figure()

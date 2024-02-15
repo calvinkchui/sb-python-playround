@@ -76,6 +76,16 @@ Refer [DataFrame](https://www.datacamp.com/tutorial/pandas-tutorial-dataframe-py
 `,
     codeUrl: "topic/data/pandas_0021_getCell.py",
   },{
+    title: "Pandas - Dataframe.groupBy", 
+    syntax: "python",  
+    codeUrl: "topic/data/pandas_0030_df-groupBy.py",   
+    content: `
+  
+  \`\`\`python
+  df.groupBy(by=["key"]).agg( {'col': func}) )
+  \`\`\`    
+  `    
+  },{    
     title: "Pandas - Change Value by condition", 
     syntax: "python",  
     codeUrl: "topic/data/pandas_0090_df-case-changeValueByCondition.py",   

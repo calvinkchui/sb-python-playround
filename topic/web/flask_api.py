@@ -5,6 +5,10 @@ How to run demo:
 > set FLASK_APP=topic\web\flask_api.py
 > flask run
 
+or
+> set FLASK_APP=topic/web/flask_api.py
+>  python3 -m flask --app topic/web/flask_api.py run 
+
 '''
 from flask import Flask, request, jsonify
 

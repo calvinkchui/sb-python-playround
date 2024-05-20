@@ -62,6 +62,53 @@ Functions:
   syntax: "python",  
   codeUrl: "topic/web/bs4.py",
 },
+
+
+{
+  title: "Asset",
+  content: `
+* syntex "assert exp1", raise AssertError of assert result is false
+* for DEv test error only. Not for runtime   
+`
+},
+/*
+{
+  title: "Context Manager",
+  content: `
+* example
+\`\`\`pyhton
+with open('test.txt', 'w' as f: // close f after execute the block
+  f.write("Test!") 
+\`\`\`
+
+* Implement object support ``with``
+\`\`\`python
+Class Demo:
+  def __init__(self):
+     ..
+  def __enter__(self): // code with 
+     ..
+  def __exist__(self, exc_type, exc_vale, traceback): // exit code with
+     ..
+
+with Demo() as x:
+   ...
+\`\`\`
+`
+},
+*/
+{
+  title: "variable naming",
+  content: `
+* \`_var\`: reminder developer it is private variable. Reminder developer don't access outside the object.
+* \`var_\`: avoid conflict with reserved word
+* \`__var\`: private variable. Python will rename the variable interally.
+* \`__var__\` : Pyhton reservice method
+* \`_\` : temp variable
+`
+},
+
+
 {
   title: "PyTest", 
   content:`

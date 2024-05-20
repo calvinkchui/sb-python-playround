@@ -6,4 +6,10 @@
 
 # Info
 * [20 Python Concepts I Wish I Knew Way Earlier](https://blog.stackademic.com/20-python-concepts-i-wish-i-knew-way-earlier-40ed5674cd52)
-* 
+
+
+# start local server
+
+```python
+python3 -m http.server
+ ```

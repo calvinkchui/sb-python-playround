@@ -51,7 +51,7 @@ if target == 'demo':
 if target == "yfinance":
   import topic.finance.yfinance
 
-#import topic.finance.yfinance_cache
+#impor tot topic.finance.yfinance_cache
 
 # MyTT https://github.com/mpquant/Python-Financial-Technical-Indicators-Pandas
 #import topic.finance.MyTTSample

@@ -15,6 +15,11 @@ var snippets = [
     codeUrl: "basic/function_mapFilterReduce.py",
   },
   {
+    title: "String",
+    syntax: "python",
+    codeUrl: "basic/string.py"
+  }
+  {
     title: "io",  
     syntax: "python",  
     codeUrl: "basic/io.py",

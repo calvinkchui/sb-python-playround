@@ -18,7 +18,7 @@ var snippets = [
     title: "String",
     syntax: "python",
     codeUrl: "basic/string.py"
-  }
+  },
   {
     title: "io",  
     syntax: "python",  

@@ -6,6 +6,7 @@ a = [1, 7, 2]
 myvar = pd.Series(a)
 print('# Series')
 print(myvar)
+
 myvar = pd.Series(a, index = ["x", "y", "z"])
 print('# Series with label')
 print(myvar)
@@ -45,13 +46,23 @@ data = {
 }
 myvar = pd.DataFrame(data)
 print('# DataFame')
-print(myvar)
-
+print(myvar.tail())
+print(myvar.describe())
 '''
 # DataFame
    calories  duration
 0       420        50
 1       380        40
 2       390        45
+
+         calories  duration
+count    3.000000       3.0
+mean   396.666667      45.0
+std     20.816660       5.0
+min    380.000000      40.0
+25%    385.000000      42.5
+50%    390.000000      45.0
+75%    405.000000      47.5
+max    420.000000      50.0
 '''
 

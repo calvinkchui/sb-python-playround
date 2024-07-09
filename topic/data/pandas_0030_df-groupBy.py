@@ -50,6 +50,26 @@ Ford      100.5      105
 Skoda      97.0      104
 '''
 
+def demo5_gorupByDate():
+    # Sample data
+    data = {
+        'date': pd.date_range(start='1/1/2020', periods=24, freq='M'),
+        'value': range(24)
+    }
+
+    df = pd.DataFrame(data)
+
+    # Convert 'date' to datetime if it's not already
+    df['date'] = pd.to_datetime(df['date'])
+    # Group by year and quarter
+    grouped = df.groupby([df['date'].dt.year, df['date'].dt.to_period('Q')]).agg({'value': 'sum'})
+
+    # Rename columns for clarity
+    grouped.columns = ['value_sum']
+
+    # Print the result
+    print(grouped)
+
 
 
 # -------------------------------------------------------
@@ -58,3 +78,5 @@ demo1()
 demo2_agg()
 demo2_agg_join()
 demo4_newColumn()
+
+demo5_gorupByDate()

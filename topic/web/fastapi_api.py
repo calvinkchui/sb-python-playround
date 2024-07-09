@@ -1,5 +1,9 @@
 from fastapi import FastAPI
 
+'from .moduleName import xxx' 
+import fastapi_routers
+
+
 #app = FastAPI()
 app = FastAPI(root_path="/proxy/8000/",
 
@@ -9,7 +13,6 @@ app = FastAPI(root_path="/proxy/8000/",
     summary="test functions"
 
 ) 
-
 
 '''
 https://fastapi.tiangolo.com/tutorial/first-steps/
@@ -24,6 +27,10 @@ Behind the Proxy
 
 app = FastAPI(root_path="/proxy/8000/") 
 '''
+
+# External Router
+app.include_router(fastapi_routers.router)
+
 # First Step
 @app.get("/")
 async def root():
@@ -63,5 +70,6 @@ fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"
 @app.get("/items/")
 async def read_item(skip: int = 0, limit: int = 10):
     return fake_items_db[skip : skip + limit]
+
 
 

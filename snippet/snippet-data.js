@@ -39,6 +39,22 @@ var snippets = [
     syntax: "python",  
     codeUrl: "advance/decorator.py",
   },
+  {
+    title: "module",
+    content: `
+* Define Module, file named mymodule.py:
+def helloWorld():
+ ...
+    
+import mymodule
+mymodule.helloWorld() 
+
+* Re-naming a moudle
+import mymodule as mx
+mx.mymodule()
+
+`    
+  },
 {
   title: "requests", 
   syntax: "python",  

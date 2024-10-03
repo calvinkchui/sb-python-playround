@@ -48,7 +48,9 @@ if target == 'demo':
   #import topic.data.pandas_01_basic
 
 if target == "pandas":
-  import topic.data.pandas_0100_readCsv 
+  import topic.data.pandas_0010_basic
+  #import topic.data.pandas_0100_readCsv 
+   
 
 # ----------------------------------------------
 # Topic - Finance

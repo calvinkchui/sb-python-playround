@@ -5,6 +5,19 @@ var snippets = [
     codeUrl: "basic/var.py",
   },
   {
+    title: "Varible - Missing variable",  
+    syntax: "python",  
+    content: 
+`
+|                   | NaN               | None               |
+|-------------------|-------------------|--------------------| 
+| Type              | float             | NonType            |
+| Check by          | \`np.isnan\` or \`df.isna()\` | \`is\` or \`==\` |
+
+* [Difference Between Nan and None in Python](https://www.geeksforgeeks.org/difference-between-nan-and-none-in-python/)
+`
+  },  
+  {
     title: "function",  
     syntax: "python",  
     codeUrl: "basic/function.py",

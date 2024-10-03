@@ -19,6 +19,17 @@ snippets = snippets.concat(
   `,
     syntax: "python",  
     codeUrl: "topic/data/pandas_0010_basic.py",
+  }, {
+      title: "Pandas - Dropping", 
+      content:`
+    \`\`\`
+    s.drop(['x']) # drop value from rows (axis=0)
+    df.drop("calories", axis=1) # drop value from column(axis=1)
+    \`\`\`
+    `,
+      syntax: "python",  
+      codeUrl: "topic/data/pandas_0012_dropping.py",
+  
   },{
     title: "Pandas - Data Frame - Join", 
     syntax: "python",  

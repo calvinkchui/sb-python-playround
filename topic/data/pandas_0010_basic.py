@@ -7,22 +7,35 @@ myvar = pd.Series(a)
 print('# Series')
 print(myvar)
 
-myvar = pd.Series(a, index = ["x", "y", "z"])
-print('# Series with label')
-print(myvar)
-
 '''
 # Series
 0    1
 1    7
 2    2
+'''
+
+print('# Series - Add index')
+myvar.index = ["x", "y", "z"]
+print(myvar)
+
+myvar = pd.Series(a, index = ["x", "y", "z"])
+print('# Series - create with index')
+print(myvar)
+
+'''
 dtype: int64
-# Series with label
+# Series - Add index
+x    1
+y    7
+z    2
+dtype: int64
+# Series - create with index
 x    1
 y    7
 z    2
 dtype: int64
 '''
+
 
 
 # Key/Value Objects as Series
@@ -38,6 +51,8 @@ day2    380
 day3    390
 dtype: int64
 '''
+
+
 
 # DataFrames - Table
 data = {

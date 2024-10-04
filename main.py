@@ -72,3 +72,15 @@ if target == "pandas_datareader":
 
 if target == "yfinance_analysis":
   import topic.finance.yfinance_analysis_01
+
+
+
+# ----------------------------------------------
+# Topic - Rich-text
+# ----------------------------------------------
+if target == "rich": 
+  import topic.rich_text.rich
+
+# ----------------------------------------------
+if target == "rich_prompt": 
+  import topic.rich_text.rich_prompt  

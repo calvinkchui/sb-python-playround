@@ -1,6 +1,11 @@
 import numpy as np
 import pandas as pd
 
+'''
+see also concat
+e.g. result = pd.concat([result, stock_df], axis=1)
+'''
+
 df = pd.DataFrame({'key': ['K0', 'K1', 'K2', 'K3', 'K4', 'K5'],
                    'A': ['A0', 'A1', 'A2', 'A3', 'A4', 'A5']})
 

@@ -48,10 +48,12 @@ if target == 'demo':
   #import topic.data.pandas_01_basic
 
 if target == "pandas":
-  import topic.data.pandas_0010_basic
+  #import topic.data.pandas_0010_basic
   #import topic.data.pandas_0100_readCsv 
-   
-
+  #import topic.data.pandas_0018_df_xarray
+  #import topic.data.pandas_0090_multiindex
+  import topic.data.pandas_0100_df_to_nestjson
+  
 # ----------------------------------------------
 # Topic - Finance
 # ----------------------------------------------

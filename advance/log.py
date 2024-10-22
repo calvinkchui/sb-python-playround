@@ -42,6 +42,13 @@ def byCode2():
   logger.critical('critical message #2')
 
 
+def byCode2b():
+
+  logger_name = "example"
+  logger = logging.getLogger(logger_name)
+
+  logger.debug('additional message to log')
+
 def byConf():
 
   logging.config.fileConfig("./logging.conf")
@@ -56,6 +63,14 @@ def byConf():
   logger.critical('critical message #Cfg')
 
 
-byCode1()
-byCode2()
-byConf()
+def demo():
+  print("demo - advance.log:")
+  byCode1()
+
+  byCode2()
+  byCode2b()
+
+  byConf()
+
+
+#print("demo - advance.log (load)")

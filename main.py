@@ -3,11 +3,13 @@ import sys
 #https://www.tutorialspoint.com/python/index.htm
 
 # Hello World
-print("run 'main.py'")
 
 target = "yfinance"  #default
 if len(sys.argv) > 1:
   target = sys.argv[1]
+
+print("run 'main.py'", target)
+
 
 if target == 'demo':
   # ----------------------------------------------
@@ -33,14 +35,17 @@ if target == 'demo':
   #import basic.zipunzip as zz
   #zz.demo()
 
-  # ----------------------------------------------
-  # Advance
-  # ----------------------------------------------
+# ----------------------------------------------
+# Advance
+# ---------------------------------------------
 
-  #log
-  #import advance.log as log
-  #import advance.decorator as d
-  #d.demo()
+if target == "log":    
+  import advance.log as log
+  log.demo()
+
+if target == "decorator":   
+  import advance.decorator as d
+  d.demo()
 
   # ----------------------------------------------
   # Topic - Data

@@ -10,7 +10,8 @@ or
 >  python3 -m flask --app topic/web/flask_api.py run 
 
 '''
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
+import os
 
 app = Flask(__name__)
 
@@ -36,3 +37,23 @@ def add_country():
         countries.append(country)
         return country, 201
     return {"error": "Request must be JSON"}, 415
+
+@app.route("/echo/<message>", methods=["GET"])
+def echo(message):
+    return {"message":message}
+
+'''
+@app.route("/echo_path_param/<path:message>", methods=["GET"])
+def echo_path_param(message):
+    return {"path_message":message}    
+'''
+
+#https://dev.to/nelsonmendezz_/how-to-create-server-files-with-flask-4hdp
+@app.route('/file/<path:filename>')
+def get_file(filename):
+    print("filename", filename)
+    print("cwd", os.getcwd())
+    return send_from_directory(os.getcwd(), path=filename, as_attachment=False)
+
+
+

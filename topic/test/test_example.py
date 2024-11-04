@@ -1,5 +1,6 @@
 # https://www.tutorialspoint.com/pytest/pytest_file_execution.htm
-
+# run
+# > pytest
 
 def test_greater():  # failed
   num = 100

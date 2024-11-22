@@ -9,14 +9,26 @@ var snippets = [
     syntax: "python",  
     content: 
 `
+
 |                   | NaN               | None               |
-|-------------------|-------------------|--------------------| 
+|:------------------|:------------------|:-------------------| 
 | Type              | float             | NonType            |
 | Check by          | \`np.isnan\` or \`df.isna()\` | \`is\` or \`==\` |
 
 * [Difference Between Nan and None in Python](https://www.geeksforgeeks.org/difference-between-nan-and-none-in-python/)
+
 `
+  },
+  {
+    title: "list",  
+    syntax: "python",  
+    codeUrl: "basic/var_list.py",
   },  
+  {
+    title: "function",  
+    syntax: "python",  
+    codeUrl: "basic/function.py",
+  },    
   {
     title: "function",  
     syntax: "python",  
@@ -41,6 +53,11 @@ var snippets = [
     title: "json",  
     syntax: "python",  
     codeUrl: "basic/pyjson.py",
+  }, 
+  {
+    title: "cookbook - find duplicate",  
+    syntax: "python",  
+    codeUrl: "cookbook/list_find_duplicate.py",
   }, 
   {
     title: "logging",  
@@ -96,7 +113,6 @@ Functions:
   syntax: "python",  
   codeUrl: "topic/web/bs4.py",
 },
-
 
 {
   title: "Asset",

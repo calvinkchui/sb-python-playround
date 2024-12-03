@@ -87,6 +87,22 @@ Refer [DataFrame](https://www.datacamp.com/tutorial/pandas-tutorial-dataframe-py
 `,
     codeUrl: "topic/data/pandas_0021_getCell.py",
   },{
+    title: "Pandas - Dataframe.drop_duplicates", 
+    syntax: "python",  
+    content: `
+
+ df.drop_duplicates()
+ df.drop_duplicates(
+     subset = [ col1, col2 ], # distinct by cols,
+     keep = ?, # "last" - keep the last column, false - skip row if duplicate
+     
+ )
+
+ 
+    `
+  }
+
+  },{
     title: "Pandas - Dataframe.groupBy", 
     syntax: "python",  
     codeUrl: "topic/data/pandas_0030_df-groupBy.py",   

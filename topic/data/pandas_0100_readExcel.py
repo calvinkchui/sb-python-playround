@@ -3,6 +3,31 @@ import pandas as pd
 # see - https://sparkbyexamples.com/pandas/pandas-read-excel-with-examples/
 # install dpendency if required - `pip install openpyxl`
 
+'''
+pf.read_excel( file ,
+    sheet_name = ?, # by name e.g. "name", by index e.g. 0
+    index_col = ?, # 0 - by first column
+    header = ?, # 0 - 0 by first row, None
+    usecols = [0,2] - get column 0 & 2 only
+
+
+
+# get data size by .shape
+e.g.
+> df.shape
+(4,4)
+
+# get data info by info()
+e.g.
+> df.info()
+<Class 
+...
+Column 1      4 non-null object
+Column 2      4 non-null int64
+....
+'''
+
+
 # Read Excel file
 df = pd.read_excel('assets/programmingLang.xlsx')
 print(df)
@@ -30,3 +55,5 @@ print(df2)
 3      Python       NaN       3.0     NaN      3.0
 4        Java       NaN       NaN     2.0      NaN
 '''
+
+

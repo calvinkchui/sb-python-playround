@@ -49,6 +49,10 @@ if target == "log":
   import advance.log as log
   log.demo()
 
+if target == "loguru":    
+  import advance.loguru as loguru
+  loguru.demo()
+
 if target == "decorator":   
   import advance.decorator as d
   d.demo()

@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
+## Note: see also soupsieve
+
 url = "https://fchart.github.io/"
 response = requests.get(url)
 soup = BeautifulSoup(response.text, "html.parser")

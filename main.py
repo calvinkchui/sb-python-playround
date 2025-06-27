@@ -35,8 +35,11 @@ if target == 'demo':
   #import basic.zipunzip as zz
   #zz.demo()
 
-  import basic.one_liners as ol
-  ol.demo()
+  #import basic.one_liners as ol
+  #ol.demo()
+
+  import basic.eval as el
+  el.demo()
 
 if target == 'singleton':
   import basic.singleton

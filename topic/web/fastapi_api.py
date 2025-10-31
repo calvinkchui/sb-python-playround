@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 
 'from .moduleName import xxx' 
 import fastapi_routers
@@ -15,11 +16,13 @@ app = FastAPI( #root_path="/proxy/8000/",
 ) 
 
 
+
+
 '''
 https://fastapi.tiangolo.com/tutorial/first-steps/
 
 > cd topic/web/
-> python3 -m uvicorn fastapi_api:app --reload
+> python3 -m uvicorn fastapi_api:app --host=0.0.0.0 --port=8000 --reload 
 '''
 
 '''
@@ -81,6 +84,7 @@ Note for DOC
 '''
 
 
+
 # Path Parameter
 @app.get("/items/{item_id}", tags=["items"])
 async def read_item(item_id):
@@ -106,3 +110,7 @@ async def other_root():
 
 # Mount sub-applications
 app.mount("/other", other_app)
+
+
+
+app.mount("/", StaticFiles(directory="."), name="static")

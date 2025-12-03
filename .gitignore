@@ -10,3 +10,4 @@ venv/
 
 out/
 
+topic/db/.env

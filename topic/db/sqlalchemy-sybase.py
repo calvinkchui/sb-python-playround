@@ -39,9 +39,11 @@ print(df.head())
 
 df = df.drop(columns=['timestamp'])
 
-print("export to db")
-n = df.to_sql( "cal_tsm_smj_ct", engine, 
-   if_exists="append", index=False
-   )
-print(f"  export: {n} rows")
+# Export to DB
+if true:
+   print("export to db")
+   n = df.to_sql( "cal_tsm_smj_ct", engine, 
+      if_exists="append", index=False
+      )
+   print(f"  export: {n} rows")
 
